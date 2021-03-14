@@ -1,4 +1,4 @@
-.root {
+.root-header {
   background: #202736;
   background-attachment: fixed;
   background-size: cover;
@@ -6,18 +6,17 @@
   min-height: 100vh;
   margin: 0 auto;
   z-index: 1;
-}
-
-.root::before {
-  content: "";
-  position: fixed;
-  background: url(./img/Starts.svg);
-  background-attachment: fixed;
-  width: 100%;
-  min-height: 100vh;
-  z-index: -1;
-  animation: stars-move-in 1000ms 300ms forwards;
-  opacity: 0;
+  &::before {
+    content: "";
+    position: fixed;
+    background: url(./img/Starts.svg);
+    background-attachment: fixed;
+    width: 100%;
+    min-height: 100vh;
+    z-index: -1;
+    animation: stars-move-in 1000ms 300ms forwards;
+    opacity: 0;
+  }
 }
 
 @keyframes stars-move-in {
@@ -62,6 +61,19 @@
   opacity: 0;
   transform: translate(-50%, -50%);
   animation: text-fade-in 1000ms 800ms forwards;
+  h1 {
+    font-size: 65px;
+    font-weight: normal;
+    font-style: italic;
+    color: #fafafa;
+    line-height: 65px;
+  }
+  p {
+    font-size: 28px;
+    font-weight: normal;
+    color: #fafafa;
+    line-height: 32px;
+  }
 }
 
 @keyframes text-fade-in {
@@ -72,19 +84,4 @@
     opacity: 1;
     right: 25%;
   }
-}
-
-.container h1 {
-  font-size: 65px;
-  font-weight: normal;
-  font-style: italic;
-  // color: #fafafa;
-  line-height: 65px;
-}
-
-.container p {
-  font-size: 28px;
-  font-weight: normal;
-  // color: #fafafa;
-  line-height: 32px;
 }

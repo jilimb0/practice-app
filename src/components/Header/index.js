@@ -3,7 +3,7 @@ import "./Header.scss"
 
 const Header = ({ title, descr }) => {
   return (
-    <header className="root">
+    <header className="root-header">
       <div className="forest"></div>
       <div className="container">
         <h1>{title ? title : "This is title"}</h1>
