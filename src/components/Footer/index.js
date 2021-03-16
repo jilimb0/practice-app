@@ -3,7 +3,7 @@ import "./Footer.scss"
 
 const Footer = ({ title, descr }) => {
   return (
-    <footer>
+    <footer id="contact">
       <div className="wrapper">
         <h3>THANKS FOR VISITING</h3>
         <p>© 2021 #ReactMarathon.</p>

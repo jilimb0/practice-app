@@ -1,7 +1,7 @@
 import React from "react"
 import "./Layout.scss"
 
-const Layout = ({ title, descr, urlBg, colorBg }) => {
+const Layout = ({ id, title, urlBg, colorTitle, colorBg, children }) => {
   return (
     <section
       className="root"
@@ -9,7 +9,7 @@ const Layout = ({ title, descr, urlBg, colorBg }) => {
     >
       <div className="wrapper">
         <article>
-          <div className="title">
+          <div className="title" style={{ color: `${colorTitle}` }}>
             <h3>{title ? title : "This is title"}</h3>
             <span className="separator"></span>
           </div>

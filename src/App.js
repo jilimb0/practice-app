@@ -1,18 +1,23 @@
-import Header from "./components/Header"
-import Layout from "./components/Layout"
-import Footer from "./components/Footer"
-import bg1 from "./img/bg1.jpg"
-import bg3 from "./img/bg3.jpg"
+import { useState } from "react"
+import HomePage from "./routes/Home"
+import GamePage from "./routes/Game"
 
-function App() {
-  return (
-    <>
-      <Header />
-      <Layout urlBg={bg1} />
-      <Layout colorBg="red" />
-      <Layout urlBg={bg3} />
-      <Footer />
-    </>
-  )
+const App = () => {
+  const [page, setPage] = useState("app")
+
+  const handleChangePage = (page) => {
+    setPage(page)
+  }
+
+  switch (page) {
+    case "app":
+      return <HomePage onChangePage={handleChangePage} />
+    case "game":
+      return <GamePage onChangePage={handleChangePage} />
+    default:
+      return <HomePage />
+  }
+>>>>>>> Stashed changes
 }
+
 export default App
