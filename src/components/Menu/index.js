@@ -1,6 +1,7 @@
 import s from "./style.module.scss"
+import cn from "classnames"
 
-const Menu = ({ onClickMenuPage }) => {
+const Menu = ({ onClickMenuPage, isNavBar, handleMenu }) => {
   const gamePage = () => {
     onClickMenuPage && onClickMenuPage("game")
   }
@@ -8,12 +9,12 @@ const Menu = ({ onClickMenuPage }) => {
     onClickMenuPage && onClickMenuPage("app")
   }
   return (
-    <div class={(s.menuContainer, s.active)}>
-      <div class={s.overlay} />
-      <div class={s.menuItems}>
+    <div className={cn(s.menuContainer, { [s.active]: isNavBar })}>
+      <div className={s.overlay} />
+      <div className={s.menuItems}>
         <ul>
           <li>
-            <a href="#welcome" onClick={homePage}>
+            <a href="#welcome" onClick={homePage && handleMenu}>
               HOME
             </a>
           </li>
@@ -23,10 +24,14 @@ const Menu = ({ onClickMenuPage }) => {
             </a>
           </li>
           <li>
-            <a href="#about">ABOUT</a>
+            <a href="#cards" onClick={handleMenu}>
+              CARDS
+            </a>
           </li>
           <li>
-            <a href="#contact">CONTACT</a>
+            <a href="#about" onClick={handleMenu}>
+              ABOUT
+            </a>
           </li>
         </ul>
       </div>

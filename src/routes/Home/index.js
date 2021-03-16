@@ -18,6 +18,7 @@ const HomePage = ({ onChangePage }) => {
     <>
       <MenuHeader onClickButton={handleClickButton} />
       <Header
+        id="welcome"
         title="Pokemon Game"
         descr="This is simple triple triad card game"
         onClickButton={handleClickButton}

@@ -1,12 +1,12 @@
 import React from "react"
 import s from "./style.module.scss"
 
-const Header = ({ title, descr, onClickButton }) => {
+const Header = ({ id, title, descr, onClickButton }) => {
   const handeClick = () => {
     onClickButton && onClickButton("game")
   }
   return (
-    <header className={s.root}>
+    <header className={s.root} id={id}>
       <div className={s.forest}></div>
       <div className={s.container}>
         <h1>{title ? title : "This is title"}</h1>

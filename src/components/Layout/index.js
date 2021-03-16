@@ -1,21 +1,21 @@
 import React from "react"
-import "./Layout.scss"
+import s from "./style.module.scss"
+import cn from "classnames"
 
-const Layout = ({ title, descr, urlBg, colorBg, colorTitle }) => {
+const Layout = ({ id, title, urlBg, colorBg, colorTitle, children }) => {
   return (
     <section
-      className="root"
+      className={s.root}
+      id={id}
       style={{ background: `${urlBg ? `url(${urlBg})` : colorBg}` }}
     >
-      <div className="wrapper">
+      <div className={s.wrapper}>
         <article>
-          <div className="title" style={{ color: `${colorTitle}` }}>
+          <div className={s.title} style={{ color: `${colorTitle}` }}>
             <h3>{title ? title : "This is title"}</h3>
-            <span className="separator"></span>
+            <span className={s.separator}></span>
           </div>
-          <div className="desc full">
-            <p>{descr ? descr : "This is Description!"}</p>
-          </div>
+          <div className={cn(s.desc, s.full)}>{children}</div>
         </article>
       </div>
     </section>

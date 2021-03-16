@@ -18,9 +18,12 @@ const MenuHeader = ({ onClickButton }) => {
 
   return (
     <>
-      <Menu onClickMenuPage={onClickMenu} />
-      <img src={burger} className={s.hamburger} onClick={handleClick}></img>
-      {isNavBar && <NavBar onClickNavBar={handleClick} />}
+      <Menu
+        onClickMenuPage={onClickMenu}
+        handleMenu={handleClick}
+        isNavBar={isNavBar}
+      />
+      <NavBar isNavBar={isNavBar} handleMenu={handleClick} />
     </>
   )
 }
