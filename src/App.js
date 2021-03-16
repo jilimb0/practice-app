@@ -17,7 +17,6 @@ const App = () => {
     default:
       return <HomePage />
   }
->>>>>>> Stashed changes
 }
 
 export default App

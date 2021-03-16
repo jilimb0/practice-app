@@ -1,7 +1,7 @@
 import React from "react"
 import "./Layout.scss"
 
-const Layout = ({ id, title, urlBg, colorTitle, colorBg, children }) => {
+const Layout = ({ title, descr, urlBg, colorBg, colorTitle }) => {
   return (
     <section
       className="root"

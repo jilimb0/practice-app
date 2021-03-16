@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import s from "./style.module.scss"
-import cardBack from "./img/card-back-side.jpg"
+import cardBack from "./card-back-side.jpg"
 import cn from "classnames"
 
 const PokemonCard = ({ name, img, id, type, values }) => {
