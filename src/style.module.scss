@@ -1,0 +1,14 @@
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.wrap {
+  min-height: calc(100vh - 100px);
+  padding: 96px 31px 24px;
+  &.isHomePage {
+    padding: 0;
+  }
+}

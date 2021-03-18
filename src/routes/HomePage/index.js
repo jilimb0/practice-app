@@ -1,13 +1,10 @@
 import Header from "../../components/Header"
 import Layout from "../../components/Layout"
-import Footer from "../../components/Footer"
-import MenuHeader from "../../components/MenuHeader"
-import POKEMONS from "../../pokemons.json"
+
 import s from "./style.module.scss"
 
 import bg1 from "../../img/bg1.jpg"
 import bg3 from "../../img/bg3.jpg"
-import PokemonCard from "../../components/PokemonCard"
 
 const HomePage = ({ onChangePage }) => {
   const handleClickButton = (page) => {
@@ -16,7 +13,6 @@ const HomePage = ({ onChangePage }) => {
 
   return (
     <>
-      <MenuHeader onClickButton={handleClickButton} />
       <Header
         id="welcome"
         title="Pokemon Game"
@@ -36,21 +32,6 @@ const HomePage = ({ onChangePage }) => {
         </span>
       </Layout>
 
-      <Layout id="cards" title="Cards" colorTitle="#FEFEFE" colorBg="#202736">
-        <div className={s.flex}>
-          {POKEMONS.map((item) => (
-            <PokemonCard
-              key={item.id}
-              name={item.name}
-              img={item.img}
-              id={item.id}
-              type={item.type}
-              values={item.values}
-            />
-          ))}
-        </div>
-      </Layout>
-
       <Layout id="about" title="Full rules" urlBg={bg3}>
         <span>
           To win, a majority of the total ten cards played (including the one
@@ -64,8 +45,6 @@ const HomePage = ({ onChangePage }) => {
           the player's color instead.
         </span>
       </Layout>
-
-      <Footer />
     </>
   )
 }

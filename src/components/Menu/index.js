@@ -1,38 +1,34 @@
+import { Link } from "react-router-dom"
 import s from "./style.module.scss"
 import cn from "classnames"
 
-const Menu = ({ onClickMenuPage, isNavBar, handleMenu }) => {
-  const gamePage = () => {
-    onClickMenuPage && onClickMenuPage("game")
-  }
-  const homePage = () => {
-    onClickMenuPage && onClickMenuPage("app")
-  }
+const MENU = [
+  { title: "HOME", to: "/" },
+  { title: "GAME", to: "/game" },
+  { title: "ABOUT", to: "/about" },
+  { title: "CONTACT", to: "/contacts" },
+]
+
+const Menu = ({ onClickHamburger, isOpen }) => {
   return (
-    <div className={cn(s.menuContainer, { [s.active]: isNavBar })}>
+    <div
+      className={cn(s.menuContainer, {
+        [s.active]: isOpen === true,
+        [s.deactive]: isOpen === false,
+      })}
+    >
       <div className={s.overlay} />
-      <div className={s.menuItems}>
+      <div>
         <ul>
-          <li>
-            <a href="#welcome" onClick={homePage && handleMenu}>
-              HOME
-            </a>
-          </li>
-          <li>
-            <a href="#game" onClick={gamePage}>
-              GAME
-            </a>
-          </li>
-          <li>
-            <a href="#cards" onClick={handleMenu}>
-              CARDS
-            </a>
-          </li>
-          <li>
-            <a href="#about" onClick={handleMenu}>
-              ABOUT
-            </a>
-          </li>
+          {MENU.map(({ to, title }, index) => {
+            return (
+              <li key={index}>
+                <Link to={to} onClick={onClickHamburger}>
+                  {title}
+                </Link>
+              </li>
+            )
+          })}
         </ul>
       </div>
     </div>
