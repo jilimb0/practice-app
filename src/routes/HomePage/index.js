@@ -1,7 +1,7 @@
 import Header from "../../components/Header"
 import Layout from "../../components/Layout"
 
-import s from "./style.module.scss"
+// import s from "./style.module.scss"
 
 import bg1 from "../../img/bg1.jpg"
 import bg3 from "../../img/bg3.jpg"

@@ -3,7 +3,7 @@ import cardBack from "../../img/card-back-side.jpg"
 import cn from "classnames"
 
 const PokemonCard = ({
-  handleReturnId,
+  onClickCard,
   isActive,
   name,
   img,
@@ -12,7 +12,7 @@ const PokemonCard = ({
   values,
 }) => {
   return (
-    <div className={s.root} onClick={() => handleReturnId(id)}>
+    <div className={s.root} onClick={() => onClickCard(id)}>
       <div className={cn(s.pokemonCard, { [s.active]: isActive })}>
         <div className={s.cardFront}>
           <div className={`${s.wrap} ${s.front}`}>
