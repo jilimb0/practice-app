@@ -3,8 +3,8 @@ import Layout from "../../components/Layout"
 
 // import s from "./style.module.scss"
 
-import bg1 from "../../img/bg1.jpg"
-import bg3 from "../../img/bg3.jpg"
+import bg1 from "../../assets/bg1.jpg"
+import bg3 from "../../assets/bg3.jpg"
 
 const HomePage = ({ onChangePage }) => {
   const handleClickButton = (page) => {
