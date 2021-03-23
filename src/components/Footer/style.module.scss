@@ -9,23 +9,23 @@ footer {
   height: 100px;
   background: #fafafa;
   z-index: 0;
-}
-
-footer .wrapper {
-  display: flex;
-  width: 100%;
-  padding: 2rem;
-  max-width: 1400px;
-  align-items: center;
-  justify-content: space-between;
+  .wrapper {
+    display: flex;
+    width: 100%;
+    padding: 2rem;
+    max-width: 1400px;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 @media only screen and (max-width: 649px) {
-  footer .wrapper {
-    flex-direction: column;
-  }
-
-  footer .wrapper h3 {
-    padding-bottom: 0.8rem;
+  footer {
+    .wrapper {
+      flex-direction: column;
+      h3 {
+        padding-bottom: 0.8rem;
+      }
+    }
   }
 }
