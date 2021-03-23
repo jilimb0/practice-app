@@ -5,7 +5,7 @@ import { PokemonContext } from "../../../../context/pokemonContext"
 import s from "./style.module.scss"
 
 const BoardPage = () => {
-  const { pokemons } = useContext(PokemonContext)
+  const { pokemons } = useContext(PokemonContext) 
   return (
     <div className={s.root}>
       <div className={s.playerOne}>
