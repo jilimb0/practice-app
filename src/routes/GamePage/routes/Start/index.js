@@ -19,7 +19,7 @@ const StartPage = () => {
     })
 
     return () => firebase.offPokemonSocket()
-  }, [])
+  }, [firebase])
 
   const handleActiveSelected = (key) => {
     const pokemon = { ...pokemons[key] }

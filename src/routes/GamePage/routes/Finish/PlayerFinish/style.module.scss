@@ -1,0 +1,21 @@
+.cardBoard {
+  min-width: 15vw;
+  min-height: 20vw;
+  margin: 2% 0.5%;
+  &.selected {
+    & .pokemonCard {
+      & .cardFront {
+        & .wrap {
+          &.front {
+            &::after {
+              border: 12px solid blue !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
